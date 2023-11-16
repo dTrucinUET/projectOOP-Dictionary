@@ -17,6 +17,10 @@ import javafx.stage.StageStyle;
  * Main Class để run
  */
 public class App extends Application {
+
+    private double xOffset = 0;
+    private double yOffset = 0;
+
     public App() {
     }
 
@@ -28,7 +32,6 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("home.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 960, 640);
         stage.setTitle("Dictionary");
-
         stage.setScene(scene);
         stage.show();
     }
