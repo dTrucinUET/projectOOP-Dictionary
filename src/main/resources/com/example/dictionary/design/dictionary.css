@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    src: url('Poppins-Medium.ttf');
+}
+
+.text {
+    -fx-font-family: "Poppins";
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #347486;
+}
+
+#background {
+    -fx-background-image: url('bgr.jpg');
+    -fx-background-size: 120% 120%;
+    -fx-background-position: center;
+}
