@@ -16,6 +16,7 @@
                </font>
             </Button>
             <AnchorPane id="title" layoutX="165.0" layoutY="159.0" prefHeight="102.0" prefWidth="430.0" stylesheets="@design/menu.css" />
+            <AnchorPane id="home-note" layoutX="230.0" layoutY="250.0" prefHeight="280.0" prefWidth="320.0" stylesheets="@design/menu.css" />
          </children>
       </AnchorPane>
    </children>
