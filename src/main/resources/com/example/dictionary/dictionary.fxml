@@ -4,7 +4,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.App">
+<AnchorPane prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
    <children>
       <AnchorPane id="background" prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" />
       <Button id="button1" layoutX="103.0" layoutY="158.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="94.0" stylesheets="@design/dictionary.css" text="Button" />
