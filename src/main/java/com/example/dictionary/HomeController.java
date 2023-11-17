@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HomeController {
 
@@ -20,7 +21,7 @@ public class HomeController {
     private Parent root;
 
     public void switchToDictionary(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("dictionary.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dictionary.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
