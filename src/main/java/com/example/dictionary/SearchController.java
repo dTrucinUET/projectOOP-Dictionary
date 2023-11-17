@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class SearchController {
+public class SearchController extends Controllers {
 
     @FXML
     Label nameLabel;
@@ -22,14 +22,7 @@ public class SearchController {
     private Parent root;
 
     public void displayName(String username) {
-        nameLabel.setText("Hello: " + username);
+        nameLabel.setText("Search: " + username);
     }
 
-    public void switchToDictionary(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dictionary.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 }

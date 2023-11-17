@@ -14,47 +14,109 @@
 
 #background {
     -fx-background-image: url('bgr.jpg');
-    -fx-background-size: 120% 120%;
+    -fx-background-size: 110% 110%;
     -fx-background-position: center;
 }
 
 .button {
-    -fx-background-size: 100% 100%;
-    -fx-background-position: center;
-    -fx-background-color: transparent;
+    -fx-background-size: 70% 70%;
+    -fx-background-position: top;
+    -fx-background-color: #eadcd6;
+    -fx-background-repeat: no-repeat;
 }
 
-#button1 {
-    -fx-background-image: url('dictionary/button1.png');
-
+.button:hover {
+    -fx-background-size: 75% 75%;
+    -fx-text-fill: #440202;
 }
 
-
-
-#button2 {
-    -fx-background-image: url('dictionary/button2.png');
+#myVocabulary {
+    -fx-background-size: 65% 65%;
+    -fx-background-image: url('dictionary/myVocabulary.png');
+    -fx-background-position: center 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #347486;
+    -fx-border-radius: 10px;
 }
 
-#button3 {
-    -fx-background-image: url('dictionary/button3.png');
+#myVocabulary:hover {
+    -fx-background-size: 70% 70%;
 }
 
-#button4 {
-    -fx-background-image: url('dictionary/button4.png');
+#video {
+    -fx-background-image: url('dictionary/video.png');
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #347486;
+    -fx-border-radius: 10px;
 }
 
-#button5 {
-    -fx-background-image: url('dictionary/button5.png');
+#grammar {
+    -fx-background-image: url('dictionary/grammar.png');
+    -fx-background-position: center 5px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #347486;
+    -fx-border-radius: 10px;
 }
 
-#button6 {
-    -fx-background-image: url('dictionary/button6.png');
+#translateImage {
+    -fx-background-size: 65% 65%;
+    -fx-background-image: url('dictionary/translateImage.png');
+    -fx-background-position: center 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #347486;
+    -fx-border-radius: 10px;
+}
+
+#translateImage:hover {
+    -fx-background-size: 70% 70%;
+}
+
+#translate {
+    -fx-background-image: url('dictionary/translate.png');
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #347486;
+    -fx-border-radius: 10px;
+}
+
+#history {
+    -fx-background-size: 65% 65%;
+    -fx-background-image: url('dictionary/history.png');
+    -fx-background-position: center 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #347486;
+    -fx-border-radius: 10px;
+}
+
+#history:hover {
+    -fx-background-size: 70% 70%;
 }
 
 #icon-back-home {
-  -fx-background-image: url('back-icon.png');
+    -fx-background-image: url('back-icon.png');
+    -fx-background-color: transparent;
+    -fx-background-position: center;
 }
 
 #icon-back-home:hover {
     -fx-background-image: url('back-icon-hover.png');
+}
+
+#search-button {
+    -fx-background-image: url('dictionary/search.png');
+    -fx-background-color: #347486;
+    -fx-background-size: 50% 90%;
+    -fx-border-radius: 0px 10px 10px 0px;
+    -fx-border-width: 2px;
+    -fx-border-color: #347486;
+}
+
+#search-button:hover {
+    -fx-background-color: #f10f0f;
+    -fx-background-size: 50% 90%;
 }
