@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.homeController">
+   <children>
+      <ImageView fitHeight="640.0" fitWidth="960.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField layoutX="222.0" layoutY="55.0" prefHeight="46.0" prefWidth="515.0" promptText="Tìm Kiếm" />
+      <ImageView fx:id="mic" fitHeight="26.0" fitWidth="27.0" layoutX="667.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/mic1.png" />
+         </image>
+      </ImageView>
+      <GridPane hgap="100.0" layoutX="105.0" layoutY="184.0" prefHeight="390.0" prefWidth="727.0" vgap="100.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.20001220703125" minWidth="10.0" prefWidth="150.39998779296874" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.59998779296876" minWidth="10.0" prefWidth="175.99996337890627" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.60003662109375" minWidth="10.0" prefWidth="169.60003662109375" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="147.2" minHeight="0.0" prefHeight="131.99999389648437" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="149.60000610351565" minHeight="0.0" prefHeight="129.60000610351565" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane prefHeight="147.0" prefWidth="192.0">
+               <children>
+                  <Button id="button1" mnemonicParsing="false" prefHeight="147.0" prefWidth="171.0" stylesheets="@style.css" text="Từ của bạn">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                     <padding>
+                        <Insets top="80.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="88.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                     <StackPane.margin>
+                        <Insets bottom="35.0" />
+                     </StackPane.margin>
+                     <image>
+                        <Image url="@img/tucuatoi.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button id="button2" mnemonicParsing="false" prefHeight="147.0" prefWidth="178.0" text="Từ theo chủ đề">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="80.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="87.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/timtheochude.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets bottom="40.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Button id="button3" mnemonicParsing="false" prefHeight="210.0" prefWidth="247.0" text="Dịch văn bản">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="80.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="83.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/dichvanban.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets bottom="35.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="234.0" prefWidth="330.0" text="Dịch nâng cao ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="80.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="80.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/dichnangcao.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets bottom="25.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="142.0" prefWidth="178.0" text="Luyện từ vựng">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="80.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="68.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/tuvung.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets bottom="20.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="229.0" prefWidth="311.0" text="Ngữ pháp">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="80.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="62.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/grammar.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets bottom="20.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="701.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/search.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="24.0" layoutY="15.0" mnemonicParsing="false" onAction="#onhomeButtonClick" prefHeight="36.0" prefWidth="61.0" text="Back" />
+      <Label fx:id="backmain" layoutX="469.0" layoutY="24.0" />
+   </children>
+</AnchorPane>
