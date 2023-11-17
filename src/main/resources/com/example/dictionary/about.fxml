@@ -5,6 +5,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
-
+<AnchorPane prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers">
+    <children>
+        <AnchorPane id="background" prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css">
+            <Button id="icon-back-home" layoutX="854.0" layoutY="65.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="51.0" prefWidth="58.0" stylesheets="@design/dictionary.css" />
+        </AnchorPane>
+    </children>
 </AnchorPane>

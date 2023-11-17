@@ -18,44 +18,43 @@
     -fx-background-position: center;
 }
 
-#button1 {
-    -fx-background-image: url('dictionary/button1.png');
+.button {
     -fx-background-size: 100% 100%;
     -fx-background-position: center;
     -fx-background-color: transparent;
 }
 
+#button1 {
+    -fx-background-image: url('dictionary/button1.png');
+
+}
+
+
+
 #button2 {
     -fx-background-image: url('dictionary/button2.png');
-    -fx-background-size: 100% 100%;
-    -fx-background-position: center;
-    -fx-background-color: transparent;
 }
 
 #button3 {
     -fx-background-image: url('dictionary/button3.png');
-    -fx-background-size: 100% 100%;
-    -fx-background-position: center;
-    -fx-background-color: transparent;
 }
 
 #button4 {
     -fx-background-image: url('dictionary/button4.png');
-    -fx-background-size: 100% 100%;
-    -fx-background-position: center;
-    -fx-background-color: transparent;
 }
 
 #button5 {
     -fx-background-image: url('dictionary/button5.png');
-    -fx-background-size: 100% 100%;
-    -fx-background-position: center;
-    -fx-background-color: transparent;
 }
 
 #button6 {
     -fx-background-image: url('dictionary/button6.png');
-    -fx-background-size: 100% 100%;
-    -fx-background-position: center;
-    -fx-background-color: transparent;
+}
+
+#icon-back-home {
+  -fx-background-image: url('back-icon.png');
+}
+
+#icon-back-home:hover {
+    -fx-background-image: url('back-icon-hover.png');
 }

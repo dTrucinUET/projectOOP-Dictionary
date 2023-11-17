@@ -5,25 +5,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.HomeController">
+<AnchorPane prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers">
    <children>
       <AnchorPane id="background" prefHeight="640.0" prefWidth="960.0" stylesheets="@design/menu.css">
          <children>
             <Button id="menu-dictionary" fx:id="dictionaryButton" layoutX="649.0" layoutY="288.0" mnemonicParsing="false" onAction="#switchToDictionary" prefHeight="45.0" prefWidth="146.0" stylesheets="@design/menu.css" text="Dictionary" textAlignment="CENTER" wrapText="true">
-               <tooltip>
-                  <Tooltip text="Empty Tooltip" />
-               </tooltip></Button>
+            </Button>
             <Button id="menu-learn" layoutX="649.0" layoutY="372.0" mnemonicParsing="false" onAction="#switchToGame" prefHeight="45.0" prefWidth="146.0" stylesheets="@design/menu.css" text="Learn" textAlignment="CENTER" wrapText="true">
-               <tooltip>
-                  <Tooltip text="Empty Tooltip" />
-               </tooltip></Button>
+            </Button>
             <Button id="menu-more" layoutX="649.0" layoutY="450.0" mnemonicParsing="false" onAction="#switchToAbout" prefHeight="45.0" prefWidth="146.0" stylesheets="@design/menu.css" text="More" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font name="Bodoni MT Black" size="12.0" />
-               </font>
-               <tooltip>
-                  <Tooltip text="Empty Tooltip" />
-               </tooltip>
             </Button>
             <AnchorPane id="title" layoutX="165.0" layoutY="159.0" prefHeight="102.0" prefWidth="430.0" stylesheets="@design/menu.css" />
             <AnchorPane id="home-note" layoutX="230.0" layoutY="250.0" prefHeight="280.0" prefWidth="320.0" stylesheets="@design/menu.css" />
