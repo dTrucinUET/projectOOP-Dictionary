@@ -13,7 +13,7 @@
             </Button>
             <Button id="menu-more" layoutX="614.0" layoutY="437.0" mnemonicParsing="false" onAction="#switchToAbout" prefHeight="63.0" prefWidth="154.0" stylesheets="@design/menu.css" text="More" textAlignment="CENTER" wrapText="true">
             </Button>
-            <AnchorPane id="title" layoutX="165.0" layoutY="159.0" prefHeight="102.0" prefWidth="430.0" stylesheets="@design/menu.css" />
+            <AnchorPane id="title" layoutX="160.0" layoutY="140.0" prefHeight="102.0" prefWidth="430.0" stylesheets="@design/menu.css" />
             <AnchorPane id="home-note" layoutX="230.0" layoutY="250.0" prefHeight="250.0" prefWidth="296.0" stylesheets="@design/menu.css" />
          </children>
       </AnchorPane>

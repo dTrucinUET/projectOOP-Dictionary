@@ -17,12 +17,8 @@ public class SearchController extends Controllers {
     @FXML
     Label nameLabel;
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
-    public void displayName(String username) {
-        nameLabel.setText("Search: " + username);
+    public void displayName(String vocabulary) {
+        nameLabel.setText(vocabulary);
     }
 
 }
