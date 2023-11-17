@@ -75,7 +75,7 @@ public class Controllers {
     }
 
     public void switchToCumtucoban(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("cumtucoban.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("tudatra.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

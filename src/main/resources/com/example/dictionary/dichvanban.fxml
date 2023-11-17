@@ -5,10 +5,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers">
     <children>
-        <AnchorPane id="background" prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css">
-            <Button id="icon-back-home" layoutX="854.0" layoutY="65.0" mnemonicParsing="false" onAction="#switchToDictionary" prefHeight="51.0" prefWidth="58.0" stylesheets="@design/dictionary.css" />
-        </AnchorPane>
+        <AnchorPane id="background" prefHeight="600.0" prefWidth="900.0" stylesheets="@design/dictionary.css">
+            <Button id="icon-back-home" layoutX="773.0" layoutY="76.0" mnemonicParsing="false" onAction="#switchToDictionary" prefHeight="51.0" prefWidth="58.0" stylesheets="@design/dictionary.css" AnchorPane.bottomAnchor="473.0" AnchorPane.leftAnchor="773.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="76.0" />        </AnchorPane>
     </children>
 </AnchorPane>
