@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HomeController {
 
@@ -19,19 +20,27 @@ public class HomeController {
     private Scene scene;
     private Parent root;
 
-    public void login(ActionEvent event) throws IOException {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("dictionary.fxml"));
-        root = loader.load();
-
-        DictionaryController scene2Controller = loader.getController();
-
-        //root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
+    public void switchToDictionary(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dictionary.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
 
+    public void switchToGame(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("game.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
+    public void switchToAbout(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("about.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
