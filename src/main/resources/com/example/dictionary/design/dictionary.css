@@ -17,3 +17,45 @@
     -fx-background-size: 120% 120%;
     -fx-background-position: center;
 }
+
+#button1 {
+    -fx-background-image: url('dictionary/button1.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#button2 {
+    -fx-background-image: url('dictionary/button2.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#button3 {
+    -fx-background-image: url('dictionary/button3.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#button4 {
+    -fx-background-image: url('dictionary/button4.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#button5 {
+    -fx-background-image: url('dictionary/button5.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#button6 {
+    -fx-background-image: url('dictionary/button6.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}

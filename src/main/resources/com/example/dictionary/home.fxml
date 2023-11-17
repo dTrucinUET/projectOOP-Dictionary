@@ -9,7 +9,7 @@
    <children>
       <AnchorPane id="background" prefHeight="640.0" prefWidth="960.0" stylesheets="@design/menu.css">
          <children>
-            <Button id="menu-dictionary" fx:id="dictionaryButton" layoutX="649.0" layoutY="288.0" mnemonicParsing="false" onAction="#goDictionary" prefHeight="45.0" prefWidth="146.0" stylesheets="@design/menu.css" text="Dictionary" textAlignment="CENTER" wrapText="true">
+            <Button id="menu-dictionary" fx:id="dictionaryButton" layoutX="649.0" layoutY="288.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="146.0" stylesheets="@design/menu.css" text="Dictionary" textAlignment="CENTER" wrapText="true">
                <tooltip>
                   <Tooltip text="Empty Tooltip" />
                </tooltip></Button>
