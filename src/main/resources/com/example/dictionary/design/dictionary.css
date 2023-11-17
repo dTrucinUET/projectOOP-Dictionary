@@ -115,8 +115,3 @@
     -fx-border-width: 2px;
     -fx-border-color: #347486;
 }
-
-#search-button:hover {
-    -fx-background-color: #f10f0f;
-    -fx-background-size: 50% 90%;
-}
