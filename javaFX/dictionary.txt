@@ -1,3 +1,0 @@
-run,to more quickly
-hello,xin chào
-hu,hihi
