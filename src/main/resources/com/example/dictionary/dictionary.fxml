@@ -5,41 +5,47 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers">
    <children>
       <AnchorPane id="background" prefHeight="640.0" prefWidth="960.0" stylesheets="@design/dictionary.css">
          <children>
-            <Button id="button6" layoutX="395.0" layoutY="376.0" mnemonicParsing="false" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Button" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="395.0" AnchorPane.topAnchor="376.0">
+            <Button id="button6" layoutX="395.0" layoutY="376.0" mnemonicParsing="false" onAction="#switchToMucyeuthich" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Mục yêu thích" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="395.0" AnchorPane.topAnchor="376.0">
                <padding>
                   <Insets top="90.0" />
                </padding>
             </Button>
-            <Button id="button5" layoutX="657.0" layoutY="376.0" mnemonicParsing="false" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Button" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="657.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="376.0">
+            <Button id="button5" layoutX="657.0" layoutY="376.0" mnemonicParsing="false" onAction="#switchToBaihocvideo" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Bài học video" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="657.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="376.0">
                <padding>
                   <Insets top="90.0" />
                </padding>
             </Button>
-            <Button id="button4" layoutX="395.0" layoutY="179.0" mnemonicParsing="false" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Button" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="395.0" AnchorPane.topAnchor="179.0">
+            <Button id="button4" layoutX="395.0" layoutY="179.0" mnemonicParsing="false" onAction="#switchToCumtucoban" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Cụm từ cơ bản" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="395.0" AnchorPane.topAnchor="179.0">
                <padding>
                   <Insets top="90.0" />
                </padding>
             </Button>
-            <Button id="button3" layoutX="124.0" layoutY="376.0" mnemonicParsing="false" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Button" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="666.0" AnchorPane.topAnchor="376.0">
+            <Button id="button3" layoutX="124.0" layoutY="376.0" mnemonicParsing="false" onAction="#switchToDichhinhanh" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Dịch hình ảnh" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="666.0" AnchorPane.topAnchor="376.0">
                <padding>
                   <Insets top="90.0" />
                </padding>
             </Button>
-            <Button id="button2" layoutX="657.0" layoutY="179.0" mnemonicParsing="false" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Button" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="657.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="179.0">
+            <Button id="button2" layoutX="657.0" layoutY="179.0" mnemonicParsing="false" onAction="#switchToTudatra" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Từ đã tra" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="657.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="179.0">
                <padding>
                   <Insets top="90.0" />
                </padding>
             </Button>
-            <Button id="button1" alignment="CENTER" contentDisplay="BOTTOM" layoutX="124.0" layoutY="179.0" mnemonicParsing="false" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Button" wrapText="true" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="666.0" AnchorPane.topAnchor="179.0">
+            <Button id="button1" alignment="CENTER" contentDisplay="BOTTOM" layoutX="124.0" layoutY="179.0" mnemonicParsing="false" onAction="#switchToDichvanban" prefHeight="171.0" prefWidth="170.0" stylesheets="@design/dictionary.css" text="Dịch văn bản" textFill="#234297" wrapText="true" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="666.0" AnchorPane.topAnchor="179.0">
                <padding>
                   <Insets top="90.0" />
                </padding>
             </Button>
-            <TextField id="tool-search" layoutX="209.0" layoutY="101.0" prefHeight="45.0" prefWidth="542.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: transparent; -fx-border-color: #15695F; -fx-border-width: 2px;" stylesheets="@design/dictionary.css" AnchorPane.bottomAnchor="494.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="209.0" AnchorPane.topAnchor="101.0" />
+            <TextField id="tool-search"  fx:id="toolSearch" layoutX="209.0" layoutY="101.0" prefHeight="45.0" prefWidth="542.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: transparent; -fx-border-color: #347486; -fx-border-width: 2px;" stylesheets="@design/dictionary.css" AnchorPane.bottomAnchor="494.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="209.0" AnchorPane.topAnchor="101.0" />
+            <Button id="icon-back-home" layoutX="854.0" layoutY="65.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="51.0" prefWidth="58.0" stylesheets="@design/dictionary.css" />
+            <Button  fx:id="searchButton" layoutX="686.0" layoutY="101.0" mnemonicParsing="false" onAction="#search" prefHeight="45.0" prefWidth="65.0" style="-fx-background-radius: 0px 10px 10px 0px; -fx-background-color: #347486; -fx-border-image-width: 2px;" />
+            <Label layoutX="81.0" layoutY="183.0" text="username:">
+            </Label>
          </children></AnchorPane>
    </children>
 </AnchorPane>

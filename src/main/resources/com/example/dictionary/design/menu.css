@@ -1,11 +1,10 @@
 @font-face {
     font-family: 'Poppins';
-    font-weight: 500;
     src: url('Poppins-Medium.ttf');
 }
 
 .text {
-    -fx-font-family: "Poppins";
+    -fx-font-family: 'Poppins';
     -fx-text-alignment: center;
     -fx-font-size: 15px;
     -fx-font-weight: bold;
