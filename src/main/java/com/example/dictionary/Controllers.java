@@ -101,5 +101,23 @@ public class Controllers {
     @FXML
     TextField toolSearch;
 
+    public void search(ActionEvent event) throws Exception {
 
+        String username = toolSearch.getText();
+        Dictionary obj = new Dictionary();
+        String mean = obj.findWord(username);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("tratu.fxml"));
+        root = loader.load();
+
+        SearchController searchController = loader.getController();
+        searchController.displayName(username);
+        System.out.println("Searching: " + username);
+        System.out.println("mean: " + mean);
+
+        //root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

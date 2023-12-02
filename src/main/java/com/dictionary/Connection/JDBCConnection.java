@@ -1,3 +1,4 @@
+
 package com.dictionary.Connection;
 
 import org.jsoup.Jsoup;
@@ -11,13 +12,11 @@ public class JDBCConnection {
     public static Connection getJDBCConnection() {
         final String url = "jdbc:mysql://localhost:3306/dictionaries";
         final String user = "root";
-        final String password = "06112003@tT";
+        final String password = "07122003";
         Connection connection = null;
 
         try {
-            System.out.println("Kết nối thành công. 1 ");
             Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("Kết nối thành công. 2");
             connection = DriverManager.getConnection(url, user, password);
             System.out.println("Kết nối thành công.");
         } catch (ClassNotFoundException | SQLException e) {
@@ -97,3 +96,4 @@ public class JDBCConnection {
         }
     }
 }
+
