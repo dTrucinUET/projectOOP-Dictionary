@@ -1,3 +1,4 @@
+
 package com.dictionary.Connection;
 
 import org.jsoup.Jsoup;
@@ -95,3 +96,4 @@ public class JDBCConnection {
         }
     }
 }
+

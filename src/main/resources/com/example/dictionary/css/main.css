@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('ttf/Poppins-Medium.ttf');
+}
+
+.text {
+    -fx-font-family: 'Poppins';
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+#backgroundImage {
+    -fx-background-image: url('images/background.png');
+    -fx-background-size: 100% 100%;
+}
+
+#toolSearch {
+    -fx-border-color: #443e3e;
+    -fx-border-width: 2;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20;
+}
+
+#searchButton {
+    -fx-background-image: url('images/searchButton.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+}
+
+#searchButton:hover {
+    -fx-background-image: url('images/searchButtonHover.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+}
+
+#microButton {
+    -fx-background-image: url('images/audio.png');
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+}
+
+#scrollPane {
+    -fx-background-color: #fde1d7;
+}
+
+#meaningLabel {
+    -fx-background-color: #fde1d7;
+    -fx-font-family: Poppins;
+    -fx-text-alignment: left;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.scroll-pane {
+    -fx-background-color: #ffd2d2;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}

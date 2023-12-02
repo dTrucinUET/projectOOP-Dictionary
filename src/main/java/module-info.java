@@ -7,6 +7,7 @@ module com.example.dictionary {
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
     requires java.sql;
+
     requires mysql.connector.j;
     requires jsoup;
 

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('ttf/Poppins-Medium.ttf');
+}
+
+.text {
+    -fx-font-family: 'Poppins';
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+#backgroundImage {
+    -fx-background-image: url('images/backgroundImage.png');
+    -fx-background-size: 100% 100%;
+}
+
+.button {
+    -fx-background-color: #9af3d8;
+    -fx-background-radius: 20;
+    -fx-background-insets: 0,1;
+    -fx-border-color: #443e3e;
+    -fx-border-width: 2;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+    -fx-text-fill: #395306;
+}
+
+.button:hover {
+    -fx-background-color: #84dfec;
+    -fx-background-radius: 20;
+    -fx-background-insets: 0,1;
+    -fx-border-color: #443e3e;
+    -fx-border-width: 2;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+    -fx-text-fill: #395306;
+}
+
+

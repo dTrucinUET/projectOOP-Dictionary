@@ -2,10 +2,12 @@ package com.example.dictionary;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+
 
 public class SearchController extends Controllers {
     // ... các biến khác
@@ -14,10 +16,13 @@ public class SearchController extends Controllers {
     @FXML
     private Label nameLabel;
 
+    Dictionary obj = new Dictionary();
     @FXML
+
     private TextField toolSearch;
 
     @FXML
+
     private Button searchButton;
 
     @FXML
@@ -57,8 +62,13 @@ public class SearchController extends Controllers {
         }
     }
 
-    private void handleSearchAction(ActionEvent event) throws Exception {
+
+    public void handleSearchAction(ActionEvent event) throws Exception {
         // Lấy dữ liệu từ TextField khi nút được nhấn
+        System.out.println("Search Button click");
+
+        switchToSearch(event);
+
         searchText = toolSearch.getText();
 
         String meaning = obj.findWord(searchText);
