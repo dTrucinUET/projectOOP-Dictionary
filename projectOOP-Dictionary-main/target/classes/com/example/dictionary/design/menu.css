@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Medium.ttf');
+}
+
+.text {
+    -fx-font-family: 'Poppins';
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #347486;
+}
+
+
+.button {
+    -fx-background-radius: 5px;
+    -fx-background-color: transparent;
+    -fx-background-image: url('button1.png');
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: #eed6d6;
+}
+
+.button:hover {
+    -fx-background-image: url('hover-button1.png');
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: #eed6d6;
+}
+
+#background {
+    -fx-background-image: url('bgr.jpg');
+    -fx-background-size: 100% 100%;
+}
+
+#title {
+    -fx-background-image: url('https://see.fontimg.com/api/renderfont4/p7WZv/eyJyIjoiZnMiLCJoIjoxMDYsInciOjEwMDAsImZzIjoxMDYsImZnYyI6IiMwMDY2ODEiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RGljdGlvbmFyeQ/grip.png');
+    -fx-background-size: 100% 100%;
+}
+
+#home-note {
+    -fx-background-image: url('home-note.png');
+    -fx-background-size: 100% 100%;
+}
+
+#music-icon {
+    -fx-background-image: url('home-note.png');
+    -fx-background-size: 100% 100%;
+}
+
+#volume-icon {
+    -fx-background-image: url('home-note.png');
+    -fx-background-size: 100% 100%;
+}
