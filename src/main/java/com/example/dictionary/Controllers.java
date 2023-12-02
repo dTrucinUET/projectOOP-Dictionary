@@ -18,16 +18,16 @@ public class Controllers {
     private Scene scene;
     private Parent root;
 
-    public void switchToDictionary(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dictionary.fxml")));
+    public void switchToSignIn(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void switchToGame(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("game.fxml")));
+    public void switchToSearch(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Search.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -101,22 +101,5 @@ public class Controllers {
     @FXML
     TextField toolSearch;
 
-    public void search(ActionEvent event) throws IOException {
 
-        String username = toolSearch.getText();
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("tratu.fxml"));
-        root = loader.load();
-
-        SearchController searchController = loader.getController();
-        searchController.displayName(username);
-
-        //root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-
-    }
 }
