@@ -85,3 +85,27 @@
     -fx-background-radius: 10;
     -fx-border-radius: 10;
 }
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    transition: fx-linear 1s;
+}
+
+.button:hover {
+    -fx-background-color: #fdc0e1;
+    transition: fx-linear 1s;
+}
+
+#switchToHome {
+    -fx-background-image: url('images/back.png');
+    -fx-background-size: 60% 60%;
+    -fx-alignment: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#demo {
+    -fx-background-image: url('images/background.png');
+    -fx-background-size: 100% 100%;
+}

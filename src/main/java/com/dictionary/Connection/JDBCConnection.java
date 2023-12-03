@@ -10,7 +10,7 @@ import java.sql.*;
 
 public class JDBCConnection {
     public static Connection getJDBCConnection() {
-        final String url = "jdbc:mysql://localhost:3306/dictionaries";
+        final String url = "jdbc:mysql://localhost:3307/dictionaries";
         final String user = "root";
         final String password = "07122003";
         Connection connection = null;

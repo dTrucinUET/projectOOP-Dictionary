@@ -1,14 +1,24 @@
-package com.example.dictionary;
+package com.example.dictionary.controller;
 
+import com.example.dictionary.Dictionary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-
+/**
+ * m cần tạo ấy thứ như label với text ở đây để t còn css
+ * Các chức năng
+ * Button: voiceButton đọc từ
+ * Button: favoriteButton thêm vào danh sách ưa thích
+ * ...
+ */
 public class SearchController extends Controllers {
     // ... các biến khác
 
@@ -16,13 +26,10 @@ public class SearchController extends Controllers {
     @FXML
     private Label nameLabel;
 
-    Dictionary obj = new Dictionary();
     @FXML
-
     private TextField toolSearch;
 
     @FXML
-
     private Button searchButton;
 
     @FXML
@@ -67,8 +74,6 @@ public class SearchController extends Controllers {
         // Lấy dữ liệu từ TextField khi nút được nhấn
         System.out.println("Search Button click");
 
-        switchToSearch(event);
-
         searchText = toolSearch.getText();
 
         String meaning = obj.findWord(searchText);
@@ -89,5 +94,24 @@ public class SearchController extends Controllers {
         // Đặt nghĩa của từ lên Label meaningLabel
         meaningLabel.setText(meaning);
         meaningLabel.setWrapText(true);
+    }
+
+    public void search(ActionEvent event) throws Exception {
+
+        String username = toolSearch.getText();
+        Dictionary obj = new Dictionary();
+        String mean = obj.findWord(username);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("tratu.fxml"));
+        root = loader.load();
+
+        SearchController searchController = loader.getController();
+        searchController.displayName(username);
+        System.out.println("Searching: " + username);
+        System.out.println("mean: " + mean);
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
