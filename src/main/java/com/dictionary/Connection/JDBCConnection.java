@@ -12,7 +12,7 @@ public class JDBCConnection {
     public static Connection getJDBCConnection() {
         final String url = "jdbc:mysql://localhost:3307/dictionaries";
         final String user = "root";
-        final String password = "06112003@tT";
+        final String password = "07122003";
         Connection connection = null;
 
         try {
