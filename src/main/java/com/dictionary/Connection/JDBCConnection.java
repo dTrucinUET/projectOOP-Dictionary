@@ -10,9 +10,9 @@ import java.sql.*;
 
 public class JDBCConnection {
     public static Connection getJDBCConnection() {
-        final String url = "jdbc:mysql://localhost:3307/dictionaries";
+        final String url = "jdbc:mysql://localhost:3306/dictionaries";
         final String user = "root";
-        final String password = "07122003";
+        final String password = "06112003@tT";
         Connection connection = null;
 
         try {
@@ -27,17 +27,18 @@ public class JDBCConnection {
     }
 
     public String getMeaning(String word) {
-        String meaning = null;
+        String meaning = "";
 
         try {
             Connection conn = getJDBCConnection();
-            String sqlQuery = "SELECT definition FROM dictionary WHERE target = ?";
+            String sqlQuery = "select definition from definitions\n" +
+                    "inner join words\n" +
+                    "on definitions.word_id = words.id where word = ?";
             PreparedStatement preparedStatement = conn.prepareStatement(sqlQuery);
             preparedStatement.setString(1, word);
             ResultSet resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                meaning = resultSet.getString("definition");
+            while (resultSet.next()) {
+                meaning += "- " + resultSet.getString("definition") + "\n";
             }
 
             resultSet.close();
@@ -46,31 +47,35 @@ public class JDBCConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        System.out.println("meaning: " + meaning);
         return meaning;
     }
 
 
     public static void main(String[] args) {
         Connection conn = JDBCConnection.getJDBCConnection();
-
         if (conn != null) {
             try {
                 // Tìm từ trong cơ sở dữ liệu
-                String targetToFind = "hello";
-                String sqlQuery = "SELECT target, definition FROM dictionary WHERE target = ?";
-
+                String targetToFind = "subject";
+                String sqlQuery = "select word, definition from words\n" +
+                        "inner join definitions\n" +
+                        "on words.id = definitions.word_id where word = ?";
                 PreparedStatement preparedStatement = conn.prepareStatement(sqlQuery);
+
                 preparedStatement.setString(1, targetToFind);
-
+                //System.out.println("test: " + preparedStatement);
                 ResultSet resultSet = preparedStatement.executeQuery();
-
+                //System.out.println("test1: " + resultSet.next());
                 // In ra màn hình thông tin từ và nghĩa (nếu có)
+                String target = "";
+                String definition = "";
                 while (resultSet.next()) {
-                    String target = resultSet.getString("target");
-                    String definition = resultSet.getString("definition");
+                    target = resultSet.getString("word");
+                    definition += resultSet.getString("definition") + "\n";
 
                     System.out.println("Từ: " + target);
+                    System.out.println("Nghĩa: " + definition);
                     Document document = Jsoup.parse(definition);
 
                     // Lấy thông tin từ thẻ <I> và <Q>

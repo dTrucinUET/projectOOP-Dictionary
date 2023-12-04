@@ -23,7 +23,7 @@
          </children>
       </AnchorPane>
       <TextField id="toolSearch" fx:id="toolSearch" layoutX="250.0" layoutY="95.0" prefHeight="37.0" prefWidth="430.0" stylesheets="@../css/main.css" text="Search..." />
-      <Button id="searchButton" fx:id="searchButton" layoutX="690.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="59.0" prefWidth="63.0" stylesheets="@../css/main.css" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="690.0" AnchorPane.rightAnchor="246.79999999999995" AnchorPane.topAnchor="84.0" />
+      <Button id="searchButton" fx:id="searchButton" layoutX="690.0" layoutY="84.0" mnemonicParsing="false" onAction="#switchToSearch" prefHeight="59.0" prefWidth="63.0" stylesheets="@../css/main.css" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="690.0" AnchorPane.rightAnchor="246.79999999999995" AnchorPane.topAnchor="84.0" />
       <Button id="microButton" fx:id="microButton" layoutX="644.0" layoutY="100.0" minHeight="-Infinity" minWidth="35.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" stylesheets="@../css/main.css" />
       <AnchorPane layoutX="31.2" layoutY="65.0" prefHeight="322.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="29.0">
          <children>
