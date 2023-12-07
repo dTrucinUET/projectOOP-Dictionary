@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class DictionaryApi {
     public static void main(String[] args) {
@@ -48,6 +50,46 @@ public class DictionaryApi {
 
                     // In kết quả
                     System.out.println("API Response: " + response.toString());
+
+                    String jsonString = response.toString();
+                    // Chuyển đổi chuỗi JSON thành đối tượng JSONArray
+                    JSONArray jsonArray = new JSONArray(jsonString);
+
+                    // Lặp qua các phần tử trong mảng JSON
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+                        // Lấy thông tin từ đối tượng JSON
+                        String h = jsonObject.getString("word");
+                        JSONArray phoneticsArray = jsonObject.getJSONArray("phonetics");
+                        JSONArray meaningsArray = jsonObject.getJSONArray("meanings");
+
+                        // In ra thông tin
+                        System.out.println("Word: " + h);
+
+                        // In ra thông tin về phonetics
+                        System.out.println("Phonetics:");
+                        for (int j = 0; j < phoneticsArray.length(); j++) {
+                            JSONObject phoneticObject = phoneticsArray.getJSONObject(j);
+                            String audio = phoneticObject.optString("audio");
+                            String text = phoneticObject.optString("text");
+                            // In ra thông tin về phonetics
+                            System.out.println("  Audio: " + audio);
+                            System.out.println("  Text: " + text);
+                        }
+
+                        // In ra thông tin về meanings
+                        System.out.println("Meanings:");
+                        for (int k = 0; k < meaningsArray.length(); k++) {
+                            JSONObject meaningObject = meaningsArray.getJSONObject(k);
+                            String partOfSpeech = meaningObject.optString("partOfSpeech");
+                            // In ra thông tin về meanings
+                            System.out.println("  Part of Speech: " + partOfSpeech);
+                            // Bạn có thể tiếp tục lấy thông tin khác tùy thuộc vào cấu trúc của JSON
+                        }
+
+                        // In ra các thông tin khác tùy thuộc vào cấu trúc JSON của bạn
+                    }
 
                     // Đóng kết nối
                     connection.disconnect();

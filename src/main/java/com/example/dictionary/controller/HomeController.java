@@ -23,4 +23,11 @@ public class HomeController extends Controllers {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToHome(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

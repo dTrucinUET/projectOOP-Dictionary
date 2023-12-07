@@ -1,18 +1,14 @@
-
 package com.dictionary.Connection;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import java.sql.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class JDBCConnection {
     public static Connection getJDBCConnection() {
         final String url = "jdbc:mysql://localhost:3306/dictionaries";
         final String user = "root";
-        final String password = "06112003@tT";
+        final String password = "07122003";
         Connection connection = null;
 
         try {
@@ -26,79 +22,104 @@ public class JDBCConnection {
         return connection;
     }
 
-    public String getMeaning(String word) {
-        String meaning = "";
+    public wordmean getMeaning(String word) {
+        wordmean result = new wordmean();
 
-        try {
-            Connection conn = getJDBCConnection();
-            String sqlQuery = "select definition from definitions\n" +
-                    "inner join words\n" +
-                    "on definitions.word_id = words.id where word = ?";
-            PreparedStatement preparedStatement = conn.prepareStatement(sqlQuery);
-            preparedStatement.setString(1, word);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                meaning += "- " + resultSet.getString("definition") + "\n";
+        try (Connection conn = getJDBCConnection()) {
+            // Query for meaning and part of speech
+            String sqlQuery = "SELECT definition, part_of_speech FROM definitions " +
+                    "INNER JOIN words ON definitions.word_id = words.id WHERE word = ?";
+            try (PreparedStatement preparedStatement = conn.prepareStatement(sqlQuery)) {
+                preparedStatement.setString(1, word);
+                ResultSet resultSet = preparedStatement.executeQuery();
+
+                while (resultSet.next()) {
+                    // Gán giá trị cho danh sách definition
+                    String definition = resultSet.getString("definition");
+                    if (definition != null) {
+                        result.addMeaning(definition);
+                    }
+
+                    // Gán giá trị cho danh sách part of speech
+                    String speech = resultSet.getString("part_of_speech");
+                    if (speech != null) {
+                        result.addSpeech(speech);
+                    }
+                }
             }
 
-            resultSet.close();
-            preparedStatement.close();
-            conn.close();
+            String sql_1 = "SELECT phonetic FROM words " +
+                    "WHERE word = ?";
+            try (PreparedStatement sql = conn.prepareStatement(sql_1)) {
+                sql.setString(1, word);
+                ResultSet result1 = sql.executeQuery();
+
+                if (result1.next()) {
+                    String phonetics = result1.getString("phonetic");
+                    if (phonetics != null) {
+                        result.phonetic = phonetics;
+                        result.wordname = word;
+                    }
+                }
+            }
+
+            // Query for synonyms
+            String sqlSyn = "SELECT synonym FROM synonyms " +
+                    "INNER JOIN words ON synonyms.word_id = words.id WHERE word = ?";
+            try (PreparedStatement syn = conn.prepareStatement(sqlSyn)) {
+                syn.setString(1, word);
+                ResultSet result1 = syn.executeQuery();
+
+                while (result1.next()) {
+                    String synonyms = result1.getString("synonym");
+                    if (synonyms != null) {
+                        result.addSynonym(synonyms);
+                    }
+                }
+            }
+
+            String sqlAnt = "SELECT antonym FROM antonyms " +
+                    "INNER JOIN words ON antonyms.word_id = words.id WHERE word = ?";
+            try (PreparedStatement ant = conn.prepareStatement(sqlAnt)) {
+                ant.setString(1, word);
+                ResultSet result1 = ant.executeQuery();
+
+                while (result1.next()) {
+                    String antonyms = result1.getString("antonym");
+                    if (antonyms != null) {
+                        result.addAntonym(antonyms);
+                    }
+                }
+            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("meaning: " + meaning);
-        return meaning;
+
+        return result;
     }
 
 
     public static void main(String[] args) {
-        Connection conn = JDBCConnection.getJDBCConnection();
-        if (conn != null) {
-            try {
-                // Tìm từ trong cơ sở dữ liệu
-                String targetToFind = "subject";
-                String sqlQuery = "select word, definition from words\n" +
-                        "inner join definitions\n" +
-                        "on words.id = definitions.word_id where word = ?";
-                PreparedStatement preparedStatement = conn.prepareStatement(sqlQuery);
+        JDBCConnection dictionaryService = new JDBCConnection();
+        String word = "long"; // Replace with the word you want to search
+        wordmean result = dictionaryService.getMeaning(word);
+        System.out.println("Từ: " + result.wordname);
+        System.out.println("Phát âm: /" + result.phonetic + "/");
 
-                preparedStatement.setString(1, targetToFind);
-                //System.out.println("test: " + preparedStatement);
-                ResultSet resultSet = preparedStatement.executeQuery();
-                //System.out.println("test1: " + resultSet.next());
-                // In ra màn hình thông tin từ và nghĩa (nếu có)
-                String target = "";
-                String definition = "";
-                while (resultSet.next()) {
-                    target = resultSet.getString("word");
-                    definition += resultSet.getString("definition") + "\n";
+        for(int i = 0; i < result.meaning.size(); i++)
+        {
+            System.out.println("Speech: " + result.speech.get(i));
+            System.out.println("Meaning: " + result.meaning.get(i));
+        }
+        for(int i = 0; i < result.synonym.size(); i++)
+        {
+            System.out.println("Đồng nghĩa: " + result.synonym.get(i));
+        }
 
-                    System.out.println("Từ: " + target);
-                    System.out.println("Nghĩa: " + definition);
-                    Document document = Jsoup.parse(definition);
-
-                    // Lấy thông tin từ thẻ <I> và <Q>
-                    Elements iTags = document.select("I");
-                    for (Element iTag : iTags) {
-                        Elements qTags = iTag.select("Q");
-                        for (Element qTag : qTags) {
-                            // Lấy nội dung trong thẻ <Q>
-                            String content = qTag.html();
-                            System.out.println(content);
-                        }
-                    }
-                    System.out.println("---------------------");
-                }
-
-                // Đóng tài nguyên
-                resultSet.close();
-                preparedStatement.close();
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        for(int i = 0; i < result.antonym.size(); i++)
+        {
+            System.out.println("Trái nghĩa: " + result.antonym.get(i));
         }
     }
 }
-
