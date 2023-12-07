@@ -20,6 +20,21 @@ class Word {
 
 public class Dictionary {
 
+    public String randomWord() {
+        JDBCConnection jdbcConnection = new JDBCConnection();
+        return  jdbcConnection.getRandomWord();
+    }
+
+    public String randomWord(int len) {
+        JDBCConnection jdbcConnection = new JDBCConnection();
+        return  jdbcConnection.getRandomWord(len);
+    }
+
+    public String matchingWord(String answer) {
+        JDBCConnection jdbcConnection = new JDBCConnection();
+        return  jdbcConnection.getMatchingRandomWord(answer);
+    }
+
     public String findWord(String word) {
         JDBCConnection jdbcConnection = new JDBCConnection();
         String meaning = jdbcConnection.getMeaning(word);
@@ -30,6 +45,21 @@ public class Dictionary {
         }
         return meaning;
     }
+
+    public int checkAnswer(String answer, String check) {
+        JDBCConnection jdbcConnection = new JDBCConnection();
+        if (!jdbcConnection.isWord(answer)) {
+            return -1;
+        } else {
+            System.out.println("check: " + check.charAt(check.length() - 1) + "!" + answer.charAt(0) + "!");
+            if (check.charAt(check.length() - 1) != answer.charAt(0)) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+
 
     public void addWord(Word word) {
         // Kiểm tra từ có tồn tại trong cơ sở dữ liệu không

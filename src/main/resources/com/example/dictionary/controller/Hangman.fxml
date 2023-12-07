@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="backgroundImage" prefHeight="523.0" prefWidth="1000.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.controller.HangmanController">
+    <children>
+      <AnchorPane fx:id="winPane" layoutX="10.0" layoutY="10.0" prefHeight="433.0" prefWidth="942.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="30.4" AnchorPane.topAnchor="60.0">
+         <children>
+            <ImageView fx:id="win2" fitHeight="259.0" fitWidth="287.0" layoutX="307.2" layoutY="139.2" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.5;" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="139.0">
+               <image>
+                  <Image url="@../css/images/Gallows2/dancer%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="playAgain" layoutX="732.0" layoutY="210.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Play again" />
+            <ImageView fx:id="win1" fitHeight="259.0" fitWidth="287.0" layoutX="317.2" layoutY="149.2" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.5;" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="135.0">
+               <image>
+                  <Image url="@../css/images/Gallows2/dancer.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Exit" layoutX="732.0" layoutY="296.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Exit" />
+            <Text fx:id="wordPlay" layoutX="165.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="meaning" layoutX="170.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="596.5367279052734" />
+            <Text layoutX="567.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to play again?" wrappingWidth="298.1859130859375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="add" layoutX="739.0" layoutY="249.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Add" />
+         </children>
+      </AnchorPane>
+        <AnchorPane fx:id="done" layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutY="41.0" prefHeight="423.0" prefWidth="941.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane fx:id="hangman11" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman12.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman10" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman11.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman9" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman9.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman8" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman8.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman7" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman7.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman6" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman6.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman5" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman5.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman4" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman4.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman3" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman3.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman2" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman2.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="hangman1" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="378.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="287.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/Gallows2/hangman1.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="494.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: 2;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="150.0">
+                     <image>
+                        <Image url="@../css/images/Gallows2/stick-man.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="45.0" layoutX="610.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="200.0">
+                     <image>
+                        <Image url="@../css/images/arrow.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="741.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOU">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane fx:id="tellPane" layoutX="401.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="280.0">
+                     <children>
+                        <Text fx:id="tellChat" layoutY="-40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I'm thinking..." wrappingWidth="84.80002441406236" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="106.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/speech-bubble(1).png" />
+                           </image>
+                        </ImageView>
+                          <TextField fx:id="guess" layoutX="112.0" layoutY="110.0" prefHeight="58.0" prefWidth="69.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="18.400000000000006">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </TextField>
+                          <Text fx:id="tell1" layoutX="20.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tell him...">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="tell2" fitHeight="44.0" fitWidth="69.0" layoutX="54.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../css/images/Gallows2/right-drawn-arrow.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="timeLabel" layoutX="41.0" layoutY="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                    <Text fx:id="textForWord" layoutX="562.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input a word" wrappingWidth="337.0001220703125">
+                        <font>
+                            <Font size="40.0" />
+                        </font>
+                    </Text>
+                  <Text layoutX="562.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="His secret" wrappingWidth="106.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane fx:id="thinkPane" prefHeight="178.0" prefWidth="200.0" AnchorPane.leftAnchor="347.0" AnchorPane.topAnchor="51.0">
+                     <children>
+                        <ImageView fitHeight="178.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../css/images/communication.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="thinkChat" strokeType="OUTSIDE" strokeWidth="0.0" text="I will die" wrappingWidth="132.52032470703125" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="angry" fitHeight="39.0" fitWidth="41.0" layoutX="86.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="101.4" AnchorPane.rightAnchor="75.0">
+                           <image>
+                              <Image url="@../css/images/angry-face.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+              <AnchorPane layoutX="107.0" layoutY="151.0" prefHeight="50.0" prefWidth="167.0" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="151.0" />
+              <Text fx:id="endOfGameText" strokeType="OUTSIDE" strokeWidth="0.0">
+                  <font>
+                      <Font size="39.0" />
+                  </font>
+              </Text>
+              <Button mnemonicParsing="false" onAction="#reset" text="Reset" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="40.0" />
+         </children>
+      </AnchorPane>
+        <AnchorPane id="demo" prefHeight="523.0" prefWidth="30.0" style="-fx-background-color: white;" stylesheets="@../css/main.css" />
+      <AnchorPane fx:id="paneBackground" prefHeight="433.0" prefWidth="942.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <ImageView fitHeight="441.0" fitWidth="422.0" layoutX="142.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.5;" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="1.0">
+               <image>
+                  <Image url="@../css/images/Gallows2/backgroundintro.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="play" layoutX="764.0" layoutY="212.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Play" />
+         </children>
+      </AnchorPane>
+        <AnchorPane id="sideBar" prefHeight="44.0" prefWidth="942.0" stylesheets="@../css/home.css" AnchorPane.bottomAnchor="449.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="30.0">
+            <children>
+                <Button id="exit" fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="898.0" layoutY="3.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="38.0" style="-fx-background-color: transparent; -fx-background-radius: 0; -fx-border-radius: 0; -fx-border-width: 0;" stylesheets="@../css/home.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <ImageView fx:id="menu" fitHeight="30.0" fitWidth="30.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="3.0">
+                    <image>
+                        <Image url="@../css/images/menu.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
