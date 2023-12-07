@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('ttf/Poppins-Medium.ttf');
+}
+
+.text {
+    -fx-font-family: 'Poppins';
+    -fx-text-alignment: center;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+#backgroundImage {
+    -fx-background-image: url('images/background.png');
+    -fx-background-size: 100% 100%;
+}
+
+.button {
+    -fx-background-color: #9af3d8;
+    -fx-background-radius: 20;
+    -fx-background-insets: 0,1;
+    -fx-border-color: #443e3e;
+    -fx-border-width: 2;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+    -fx-text-fill: #395306;
+}
+
+.button:hover {
+    -fx-background-color: #84dfec;
+    -fx-background-radius: 20;
+    -fx-background-insets: 0,1;
+    -fx-border-color: #443e3e;
+    -fx-border-width: 2;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+    -fx-text-fill: #395306;
+}
+
+#exit {
+    -fx-background-image: url('images/close.png');
+    -fx-background-size: 80% 80%;
+    -fx-alignment: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#exit:hover {
+    -fx-background-image: url('images/closeHover.png');
+    -fx-background-size: 80% 80%;
+    -fx-alignment: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#sideBar {
+    -fx-background-color: #fdc0e1;
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+
+

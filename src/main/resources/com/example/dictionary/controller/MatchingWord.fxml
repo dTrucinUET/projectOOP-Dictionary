@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="backgroundImage" prefHeight="523.0" prefWidth="1000.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.controller.MatchingWordController">
+    <children>
+        <AnchorPane id="demo" prefHeight="523.0" prefWidth="74.0" stylesheets="@../css/main.css" />
+        <AnchorPane layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: #ffeee3;" />
+        <AnchorPane id="sideBar" prefHeight="44.0" prefWidth="942.0" stylesheets="@../css/home.css" AnchorPane.bottomAnchor="449.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="30.0">
+            <children>
+                <Button id="exit" fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="898.0" layoutY="3.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="38.0" style="-fx-background-color: transparent; -fx-background-radius: 0; -fx-border-radius: 0; -fx-border-width: 0;" stylesheets="@../css/home.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <ImageView fx:id="menu" fitHeight="30.0" fitWidth="30.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="3.0">
+                    <image>
+                        <Image url="@../css/images/menu.png" />
+                    </image>
+                </ImageView>
+                <Button id="switchToHome" fx:id="back" alignment="CENTER" contentDisplay="CENTER" layoutX="792.0" layoutY="-3.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="39.2" prefWidth="38.0" style="-fx-background-color: transparent; -fx-background-radius: 0; -fx-border-radius: 0; -fx-border-width: 0;" stylesheets="@../css/main.css" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="31.2" layoutY="75.2" prefHeight="421.0" prefWidth="939.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="283.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+               <image>
+                  <Image url="@../css/images/MatchingWord/des1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="229.0" fitWidth="291.0" layoutX="391.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../css/images/MatchingWord/des2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="493.0" layoutX="268.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/images/MatchingWord/text-1701846292744.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="392.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/images/MatchingWord/text-1701846434342.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="188.0" fitWidth="250.0" layoutX="647.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="1.0">
+               <image>
+                  <Image url="@../css/images/MatchingWord/des3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="240.0" fitWidth="241.0" layoutX="14.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../css/images/MatchingWord/des4.png" />
+               </image>
+            </ImageView>
+            <Button id="yellow" alignment="CENTER" layoutX="397.0" layoutY="281.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="190.0" stylesheets="@../css/main.css" text="Play">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button id="yellow" alignment="CENTER" layoutX="397.0" layoutY="338.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="190.0" stylesheets="@../css/main.css" text="Play">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="41.2" layoutY="85.2" prefHeight="422.0" prefWidth="939.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Button fx:id="buttonSend" layoutX="646.0" layoutY="369.0" mnemonicParsing="false" text="Button" />
+            <TextField fx:id="tfMessage" layoutX="271.0" layoutY="371.0" prefHeight="26.0" prefWidth="380.0" />
+            <ScrollPane fx:id="spMain" layoutX="271.0" layoutY="1.0" prefHeight="362.0" prefWidth="413.0">
+               <content>
+                  <VBox fx:id="vBoxMessage" prefHeight="359.0" prefWidth="395.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="71.2" prefHeight="422.0" prefWidth="241.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="71.0">
+         <children>
+            <TextField layoutX="22.0" layoutY="60.0" prefHeight="26.0" prefWidth="212.0" promptText="Find on Lessenger" />
+            <Text layoutX="31.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chats">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <VBox prefHeight="282.0" prefWidth="74.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 10;">
+                     <image>
+                        <Image url="@../css/images/MatchingWord/11zon_cropped.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/images/MatchingWord/11zon_cropped%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="90.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="26.4" layoutY="60.0" prefHeight="362.0" prefWidth="212.0" spacing="10.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <Button fx:id="tranmanhcuong" alignment="TOP_RIGHT" contentDisplay="TOP" mnemonicParsing="false" prefHeight="76.0" prefWidth="202.0">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Trần Mạnh Cường  " wrappingWidth="141.33673000335693">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="mary" alignment="TOP_RIGHT" mnemonicParsing="false" prefHeight="68.0" prefWidth="200.0">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Mary                          ">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="414.0" prefWidth="230.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="61.0" layoutX="68.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 10;">
+               <image>
+                  <Image url="@../css/images/MatchingWord/11zon_cropped.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
