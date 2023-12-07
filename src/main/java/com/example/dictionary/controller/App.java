@@ -15,6 +15,7 @@ public class App extends Application {
     public App() {
     }
 
+
     public static void main(String[] args) {
         launch(args);
     }
