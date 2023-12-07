@@ -22,12 +22,14 @@ public class App extends Application {
 
     public void start(Stage stage) throws Exception {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Practice.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home.fxml")));
             stage.setTitle("Dictionary Application");
             stage.initStyle(StageStyle.TRANSPARENT);
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
