@@ -1,0 +1,19 @@
+Index: src/main/java/com/example/dictionary/controller/App.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dictionary.controller;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\nimport javafx.stage.StageStyle;\r\n\r\nimport java.util.Objects;\r\n\r\n/**\r\n * m cần code ở Search, Translate và Favorite\r\n */\r\npublic class App extends Application {\r\n    public App() {\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch(args);\r\n    }\r\n\r\n    public void start(Stage stage) throws Exception {\r\n        try {\r\n            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(\"Practice.fxml\")));\r\n            stage.setTitle(\"Dictionary Application\");\r\n            stage.initStyle(StageStyle.TRANSPARENT);\r\n            Scene scene = new Scene(root);\r\n            stage.setScene(scene);\r\n            stage.show();\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/dictionary/controller/App.java b/src/main/java/com/example/dictionary/controller/App.java
+--- a/src/main/java/com/example/dictionary/controller/App.java	(revision 218c5a31fbc6f107cafde63e404c6c7a3dc25120)
++++ b/src/main/java/com/example/dictionary/controller/App.java	(date 1701925131828)
+@@ -22,7 +22,7 @@
+ 
+     public void start(Stage stage) throws Exception {
+         try {
+-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Practice.fxml")));
++            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home.fxml")));
+             stage.setTitle("Dictionary Application");
+             stage.initStyle(StageStyle.TRANSPARENT);
+             Scene scene = new Scene(root);
