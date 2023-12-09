@@ -15,6 +15,24 @@ public class Exams {
 
     private int numQuestion;
 
+    private int score;
+
+    public int getNumQuestion() {
+        return numQuestion;
+    }
+
+    public void setNumQuestion(int numQuestion) {
+        this.numQuestion = numQuestion;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
     public int getId() {
         return id;
     }

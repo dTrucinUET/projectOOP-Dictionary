@@ -1,0 +1,26 @@
+#button1{
+    -fx-background-image: url("images/en.png");
+}
+#button1:hover{
+    --border-color: white;
+}
+
+#button2{
+    -fx-background-image: url("images/vn.png");
+}
+
+#button2:hover{
+    --border-color: white;
+}
+
+#translate_ve{
+    -fx-background-image: url("images/dich2.png");
+}
+
+#textField1{
+    -fx-text-alignment: left;
+}
+
+#textField2{
+    -fx-text-alignment: left;
+}

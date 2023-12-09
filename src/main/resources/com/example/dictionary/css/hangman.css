@@ -1,0 +1,25 @@
+.button {
+     -fx-border-color: #6e6e6e;
+     -fx-border-width: 2;
+     -fx-border-radius: 10;
+     -fx-background-radius: 10;
+     -fx-background-color: #ffffff;
+ }
+
+.button:hover {
+    -fx-border-color: #6e6e6e;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-background-color: #cec6c6;
+}
+
+#hangman {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+}
+
+
+
+
+

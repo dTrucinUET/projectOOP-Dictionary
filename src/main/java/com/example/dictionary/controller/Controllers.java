@@ -1,6 +1,7 @@
 package com.example.dictionary.controller;
 
 import com.example.dictionary.Dictionary;
+import com.example.dictionary.Students;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +25,7 @@ import java.util.ResourceBundle;
  * Có các biến để load scene
  * Xử lý đóng cửa số
  */
+
 public class Controllers implements Initializable {
 
     protected Stage stage;
@@ -38,4 +40,6 @@ public class Controllers implements Initializable {
             System.exit(0);
         });
     }
+
+    protected static Students students;
 }

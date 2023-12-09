@@ -147,5 +147,10 @@ public class MatchingWordController implements Initializable {
         spMain.setVvalue(spMain.getVmax());
     }
 
+    public void endgame(ActionEvent event) {
+
+    }
+
+
 
 }

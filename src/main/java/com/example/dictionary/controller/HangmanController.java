@@ -4,26 +4,32 @@ import javafx.animation.*;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import com.example.dictionary.Dictionary;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class HangmanController implements Initializable {
+public class HangmanController extends MainController {
     @FXML
     private AnchorPane winPane, done;
 
-    @FXML
-    private ImageView win1, win2;
+
+
 
     @FXML
     private Text wordPlay;
@@ -64,7 +70,7 @@ public class HangmanController implements Initializable {
     private Text textForWord;
 
     @FXML
-    private Text endOfGameText;
+    private Text endOfGameText1;
 
     @FXML
     private AnchorPane hangman1, hangman2, hangman3, hangman4, hangman5, hangman6, hangman7, hangman8, hangman9, hangman10, hangman11;
@@ -126,8 +132,6 @@ public class HangmanController implements Initializable {
 
         winPane.setVisible(false);
 
-        win1.setVisible(true);
-        win2.setVisible(false);
 
         play.setOnMouseClicked(event -> {
             translateTransition.setByX(-1000);
@@ -295,7 +299,7 @@ public class HangmanController implements Initializable {
 
                     livesPos++;
                     if (livesPos == 10) {
-                        endOfGameText.setText("You LOST!!");
+                        endOfGameText1.setText("You LOST!!");
                         controlGame = -1;
 
                     }
@@ -306,7 +310,7 @@ public class HangmanController implements Initializable {
                         break;
                     }
                     if (i == secretWord.length() - 1) {
-                        endOfGameText.setText("You WON!!");
+                        endOfGameText1.setText("You WON!!");
                         controlGame = 1;
 
                     }
@@ -330,6 +334,7 @@ public class HangmanController implements Initializable {
                 return null;
             }
         };
+        System.out.println(controlGame);
         thinkingTask.setOnSucceeded(event -> {
             if (controlGame == 1){
                 endGame();
@@ -342,47 +347,13 @@ public class HangmanController implements Initializable {
                 winPane.setVisible(true);
 
                 wordPlay.setText(word);
-                meaning.setText(dictionary.findWord(word));
+                meaning.setText(dictionary.findWordHangman(word));
 
                 FadeTransition fadeTransition3 = new FadeTransition(Duration.seconds(1), winPane);
                 fadeTransition3.setFromValue(0.0);
                 fadeTransition3.setToValue(1.0);
                 fadeTransition3.play();
 
-                FadeTransition fadeTransition4 = new FadeTransition(Duration.seconds(0.1), win1);
-                fadeTransition4.setFromValue(1.0);
-                fadeTransition4.setToValue(0.0);
-
-                FadeTransition fadeTransition5 = new FadeTransition(Duration.seconds(0.1), win1);
-                fadeTransition5.setFromValue(0.0);
-                fadeTransition5.setToValue(1.0);
-
-
-                FadeTransition fadeTransition6 = new FadeTransition(Duration.seconds(0.1), win2);
-                fadeTransition6.setFromValue(1.0);
-                fadeTransition6.setToValue(0.0);
-
-                FadeTransition fadeTransition7 = new FadeTransition(Duration.seconds(0.1), win2);
-                fadeTransition5.setFromValue(0.0);
-                fadeTransition5.setToValue(1.0);
-
-                boolean isWin1 = true;
-
-                for (int i = 0; i < 20; i++) {
-                    if (isWin1) {
-                        win1.setVisible(false);
-                        win2.setVisible(true);
-                        fadeTransition5.play();
-                        fadeTransition6.play();
-
-                    } else {
-                        win1.setVisible(true);
-                        win2.setVisible(false);
-                        fadeTransition7.play();
-                        fadeTransition4.play();
-                    }
-                    isWin1 = !isWin1;
-                }
 
             } else if (controlGame == -1){
                 FadeTransition fadeTransition2 = new FadeTransition(Duration.seconds(1), tellPane);
@@ -391,6 +362,7 @@ public class HangmanController implements Initializable {
                 fadeTransition2.play();
                 tellChat.setText("Better luck next life");
                 endGame();
+                done.setVisible(false);
             }
 
 
@@ -401,27 +373,20 @@ public class HangmanController implements Initializable {
     }
 
     @FXML
-    void reset(ActionEvent event) {
-        endGame();
-        word = null;
-        controlGame = 0;
-        secretWord = new StringBuilder("");
-        textForWord.setText("");
-        System.out.println(word + "  " + textForWord.getText());
-        setupWord();
-        livesPos = 0;
-        // Hiển thị hangManLives.get(0)
-        hangManLives.get(0).setVisible(true);
-        for (int i = 0; i < 11; i++) {
-            // Ẩn các hangManLives còn lại
-            hangManLives.get(i).setVisible(false);
-        }
-        for (int i = 0; i < 11; i ++) {
-            System.out.println(hangManLives.get(i).getViewOrder());
-        }
-        hangManLives.get(0).setVisible(true);
-        endOfGameText.setText("");
+    void reset(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Hangman.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
+    void endgame(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Game.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

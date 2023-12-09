@@ -5,7 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7340835d-d0b4-436c-925e-e5125903b52d" name="Changes" comment="truc co may moi">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionary/Connection/wordmean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionary/api/DictionaryApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionary/api/TranslateAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/Students.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Profile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/exam.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/hangman.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/translate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionary/Connection/JDBCConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionary/Connection/JDBCConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/Exams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/Exams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/Controllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/Controllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/FavoriteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/FavoriteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/HangmanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/HangmanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/MainControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/MainControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/MatchingWordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/MatchingWordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/PracticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/PracticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/SignUpWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/SignUpWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/TranslateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/TranslateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Favorite.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Favorite.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Game.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Hangman.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Hangman.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/MatchingWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/MatchingWord.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Practice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Practice.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Translate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/controller/Translate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/images/Gallows2/dancer (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/images/MatchingWord/11zon_cropped (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/pratice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/css/pratice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionary/Connection/JDBCConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionary/Connection/JDBCConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/Dictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/Dictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +67,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dTrucinUET&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5e78011a-0c0d-4d31-959f-5d939bd00520" />
+        <option name="url" value="https://github.com/dTrucinUET/projectOOP-Dictionary.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -37,24 +89,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "branch2",
-    "last_opened_file_path": "C:/OOP-Dictionary",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/jsoup-1.17.1.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projectOOP-Dictionary\src\main\resources\com\example\dictionary\controller" />
@@ -66,6 +118,19 @@
       <recent name="com.example.dictionary.controller" />
       <recent name="com.example.dictionary" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,6 +150,11 @@
       <workItem from="1701844783649" duration="2481000" />
       <workItem from="1701857193968" duration="29807000" />
       <workItem from="1701908263708" duration="9845000" />
+      <workItem from="1701927066072" duration="17365000" />
+      <workItem from="1701957355235" duration="537000" />
+      <workItem from="1701960772476" duration="2507000" />
+      <workItem from="1702051034157" duration="889000" />
+      <workItem from="1702053948926" duration="1463000" />
     </task>
     <task id="LOCAL-00001" summary="truc co may moi">
       <option name="closed" value="true" />
@@ -119,9 +189,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/PracticeController.java</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/dictionary/controller/HangmanController.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

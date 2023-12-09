@@ -97,6 +97,15 @@ public class MainControllers extends Controllers{
         stage.show();
     }
 
+        public void switchToProfile(ActionEvent event) throws IOException {
+        System.out.println("Sign in Clicked");
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Profile.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void switchToHome(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -122,7 +131,7 @@ public class MainControllers extends Controllers{
         stage.show();
     }
 
-    public void switchToFavorite(ActionEvent event) throws IOException {
+        public void switchToFavorite(ActionEvent event) throws IOException {
         System.out.println("Sign in Clicked");
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Favorite.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

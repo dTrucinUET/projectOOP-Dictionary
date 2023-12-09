@@ -13,30 +13,27 @@
     <children>
       <AnchorPane fx:id="winPane" layoutX="10.0" layoutY="10.0" prefHeight="433.0" prefWidth="942.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="30.4" AnchorPane.topAnchor="60.0">
          <children>
-            <ImageView fx:id="win2" fitHeight="259.0" fitWidth="287.0" layoutX="307.2" layoutY="139.2" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.5;" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="139.0">
-               <image>
-                  <Image url="@../css/images/Gallows2/dancer%20(1).png" />
-               </image>
-            </ImageView>
-            <Button fx:id="playAgain" layoutX="732.0" layoutY="210.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Play again" />
-            <ImageView fx:id="win1" fitHeight="259.0" fitWidth="287.0" layoutX="317.2" layoutY="149.2" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.5;" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="135.0">
+            <ImageView fx:id="win2" fitHeight="259.0" fitWidth="248.0" layoutX="84.8" layoutY="135.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.5;" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="135.0">
                <image>
                   <Image url="@../css/images/Gallows2/dancer.png" />
                </image>
             </ImageView>
-            <Button fx:id="Exit" layoutX="732.0" layoutY="296.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Exit" />
-            <Text fx:id="wordPlay" layoutX="165.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Button fx:id="playAgain" layoutX="779.0" layoutY="225.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" stylesheets="@../css/hangman.css" text="Play again" />
+            <Button fx:id="Exit" layoutX="779.0" layoutY="286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" stylesheets="@../css/hangman.css" text="Exit" />
+            <Text fx:id="wordPlay" layoutX="365.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="263.6050720214844">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="meaning" layoutX="365.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="363.7367401123047">
                <font>
                   <Font size="18.0" />
-               </font>
-            </Text>
-            <Text fx:id="meaning" layoutX="170.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="596.5367279052734" />
-            <Text layoutX="567.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to play again?" wrappingWidth="298.1859130859375">
+               </font></Text>
+            <Text fx:id="endOfGameText1" layoutX="417.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="192.53671264648438">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <Button fx:id="add" layoutX="739.0" layoutY="249.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Add" />
          </children>
       </AnchorPane>
         <AnchorPane fx:id="done" layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: white;">
@@ -238,7 +235,7 @@
                   <Image url="@../css/images/Gallows2/backgroundintro.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="play" layoutX="764.0" layoutY="212.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" text="Play" />
+            <Button fx:id="play" layoutX="719.0" layoutY="212.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" stylesheets="@../css/hangman.css" text="Play" />
          </children>
       </AnchorPane>
         <AnchorPane id="sideBar" prefHeight="44.0" prefWidth="942.0" stylesheets="@../css/home.css" AnchorPane.bottomAnchor="449.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="30.0">

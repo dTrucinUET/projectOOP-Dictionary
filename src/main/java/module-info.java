@@ -10,6 +10,10 @@ module com.example.dictionary {
 
    // requires mysql.connector.j;
     requires jsoup;
+    requires javafx.media;
+    requires org.json;
+    requires org.apache.commons.io;
+    requires javafx.web;
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;

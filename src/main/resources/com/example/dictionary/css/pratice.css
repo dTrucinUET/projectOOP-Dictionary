@@ -5,3 +5,50 @@
 .button-incorrect {
     -fx-background-color: red;
 }
+
+.button {
+    -fx-background-radius: 100;
+}
+
+#t1:hover {
+    -fx-background-color: #c9c3c3;
+}
+
+#t2:hover {
+    -fx-background-color: #c9c3c3;
+}
+
+.button-selected {
+    -fx-background-color: yellow;
+}
+
+#button1 {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+}
+
+#button1:hover {
+    -fx-background-color: #c9c3c3;
+    -fx-background-radius: 20;
+}
+
+#button2 {
+    -fx-background-color: #bba3e0;
+    -fx-background-radius: 20;
+}
+
+#button2:hover {
+    -fx-background-color: #a488d0;
+    -fx-background-radius: 20;
+}
+
+#button3 {
+    -fx-background-color: #fdd0e3;
+    -fx-background-radius: 20;
+}
+
+#button3:hover {
+    -fx-background-color: #d08eb2;
+    -fx-background-radius: 20;
+}
+

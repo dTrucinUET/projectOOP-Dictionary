@@ -10,52 +10,130 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="backgroundImage" prefHeight="523.0" prefWidth="1000.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.controller.GameController">
+<AnchorPane id="backgroundImage" prefHeight="523.0" prefWidth="1000.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.controller.ProfileController">
     <children>
         <AnchorPane layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: #ffeee3;">
          <children>
-            <Button id="hangman" layoutX="320.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToHangman" prefHeight="204.0" prefWidth="211.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: white;" stylesheets="@../css/game.css" text="Hang man" />
-            <Button id="matchingword" layoutX="598.0" layoutY="186.0" mnemonicParsing="false" onAction="#switchToMatchingWord" prefHeight="204.0" prefWidth="211.0" style="-fx-background-color: #c5dffa; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../css/game.css" text="Matching Word" />
-            <ImageView fitHeight="43.0" fitWidth="34.0" layoutX="580.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/images/blink.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="43.0" fitWidth="34.0" layoutX="242.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/images/blink.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="43.0" fitWidth="34.0" layoutX="832.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/images/blink.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="43.0" fitWidth="34.0" layoutX="320.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/images/blink.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="43.0" fitWidth="34.0" layoutX="832.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/images/blink.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="507.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME">
-               <font>
-                  <Font name="System Bold" size="42.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="92.0" fitWidth="137.0" layoutX="223.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/images/cloud.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="92.0" fitWidth="137.0" layoutX="741.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/images/cloud.png" />
-               </image>
-            </ImageView>
+            <VBox alignment="TOP_CENTER" layoutX="644.0" layoutY="43.0" prefHeight="410.0" prefWidth="282.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/images/MatchingWord/11zon_cropped%20(1).png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@UserName" wrappingWidth="111.5435791015625">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Information">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@MSV">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@Address">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@Birdthday">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@PhoneNumber">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="434.0" layoutY="58.0" prefHeight="390.0" prefWidth="209.0" spacing="15.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button id="button1" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="190.0" stylesheets="@../css/pratice.css" />
+                        <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hang Man" wrappingWidth="121.96990966796875">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="13.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hight core" />
+                        <Text layoutX="40.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="41.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Words: 0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button id="button2" layoutX="1.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="189.0" stylesheets="@../css/pratice.css" />
+                        <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matching Word" wrappingWidth="150.40000000000003">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hight core" />
+                        <Text layoutX="45.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="45.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Words: 0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="204.0" layoutY="58.0" prefHeight="390.0" prefWidth="209.0" spacing="5.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="128.0" fitWidth="150.0" layoutX="-4.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../css/images/MatchingWord/des3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button id="button3" layoutX="9.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="190.0" stylesheets="@../css/pratice.css" />
+                        <Text layoutX="29.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Practice" wrappingWidth="150.40000000000003">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="29.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Average" />
+                        <Text layoutX="51.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="51.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Words: 0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
          </children></AnchorPane>
         <AnchorPane layoutX="85.0" layoutY="91.0" prefHeight="50.0" prefWidth="167.0">
             <children>
@@ -114,9 +192,9 @@
         <AnchorPane fx:id="pane1" layoutX="78.0" layoutY="75.0" prefHeight="422.0" prefWidth="150.0" style="-fx-background-color: #ffeee3;" />
         <AnchorPane fx:id="pane2" layoutX="28.0" layoutY="75.2" prefHeight="423.0" prefWidth="174.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="75.0">
             <children>
-            <VBox alignment="BOTTOM_CENTER" layoutX="-51.2" layoutY="6.0" prefHeight="422.0" prefWidth="174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
-                <children>
-                    <Button mnemonicParsing="false" onAction="#switchToProfile" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
+                <VBox alignment="BOTTOM_CENTER" layoutX="-51.2" layoutY="6.0" prefHeight="422.0" prefWidth="174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
                             <VBox.margin>
                                 <Insets bottom="8.0" />
                             </VBox.margin>
@@ -124,7 +202,7 @@
                                 <Insets left="7.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="45.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Home">
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Home">
                             <VBox.margin>
                                 <Insets bottom="12.0" />
                             </VBox.margin>

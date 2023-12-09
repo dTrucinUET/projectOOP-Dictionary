@@ -74,7 +74,7 @@
          <children>
             <VBox alignment="BOTTOM_CENTER" layoutX="-51.2" layoutY="6.0" prefHeight="422.0" prefWidth="174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
+                  <Button mnemonicParsing="false" onAction="#switchToProfile" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
                      <VBox.margin>
                         <Insets bottom="8.0" />
                      </VBox.margin>

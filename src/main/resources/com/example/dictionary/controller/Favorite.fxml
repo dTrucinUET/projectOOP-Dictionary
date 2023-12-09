@@ -3,15 +3,36 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
 
 <AnchorPane id="backgroundImage" prefHeight="523.0" prefWidth="1000.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.controller.FavoriteController">
     <children>
-        <AnchorPane layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: #ffeee3;" />
+        <AnchorPane layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: #ffeee3;">
+            <children>
+                <ListView fx:id="listWord" layoutX="77.0" layoutY="115.0" prefHeight="338.0" prefWidth="206.0" />
+                <WebView fx:id="webmean" layoutX="297.0" layoutY="115.0" prefHeight="338.0" prefWidth="395.0" />
+                <Pane layoutX="700.0" layoutY="115.0" prefHeight="178.0" prefWidth="206.0">
+                    <children>
+                        <Label layoutX="14.0" prefHeight="21.0" prefWidth="110.0" text="Synonyms" />
+                        <VBox fx:id="synonymarea" layoutX="3.0" layoutY="21.0" prefHeight="154.0" prefWidth="206.0" />
+                    </children>
+                </Pane>
+                <Pane layoutX="702.0" layoutY="296.0" prefHeight="154.0" prefWidth="206.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="4.0" prefHeight="21.0" prefWidth="82.0" text="Antonyms" />
+                        <VBox fx:id="antonymarea" layoutX="5.0" layoutY="25.0" prefHeight="129.0" prefWidth="206.0" />
+                    </children>
+                </Pane>
+                <Button fx:id="voice" layoutX="632.0" layoutY="125.0" mnemonicParsing="false" onAction="#VoiceMute" prefHeight="30.0" prefWidth="50.0" text="Mic" />
+                <Button layoutX="576.0" layoutY="126.0" mnemonicParsing="false" onAction="#removefavor" text="RAB" />
+            </children></AnchorPane>
         <AnchorPane layoutX="85.0" layoutY="91.0" prefHeight="50.0" prefWidth="167.0">
             <children>
                 <ImageView fitHeight="56.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
@@ -22,8 +43,8 @@
                 <Label layoutX="61.0" layoutY="14.0" text="ED-LEARN" AnchorPane.leftAnchor="61.0" AnchorPane.topAnchor="14.0" />
             </children>
         </AnchorPane>
-        <TextField id="toolSearch" fx:id="toolSearch" layoutX="250.0" layoutY="95.0" prefHeight="37.0" prefWidth="430.0" stylesheets="@../css/main.css" text="Search..." />
-        <Button id="searchButton" fx:id="searchButton" layoutX="690.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="59.0" prefWidth="63.0" stylesheets="@../css/main.css" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="690.0" AnchorPane.rightAnchor="246.79999999999995" AnchorPane.topAnchor="84.0" />
+        <TextField id="toolSearch" fx:id="toolSearch" layoutX="250.0" layoutY="95.0" prefHeight="37.0" prefWidth="430.0" promptText="Search..." stylesheets="@../css/main.css" />
+        <Button id="searchButton" fx:id="searchButton" layoutX="690.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="51.0" prefWidth="50.0" stylesheets="@../css/main.css" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="84.0" />
         <Button id="microButton" fx:id="microButton" layoutX="644.0" layoutY="100.0" minHeight="-Infinity" minWidth="35.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" stylesheets="@../css/main.css" />
         <AnchorPane layoutX="31.2" layoutY="65.0" prefHeight="322.0" prefWidth="50.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="29.0">
             <children>
@@ -74,7 +95,7 @@
             <children>
                 <VBox alignment="BOTTOM_CENTER" layoutX="-51.2" layoutY="6.0" prefHeight="422.0" prefWidth="174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
+                        <Button mnemonicParsing="false" onAction="#switchToProfile" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
                             <VBox.margin>
                                 <Insets bottom="8.0" />
                             </VBox.margin>
@@ -82,7 +103,7 @@
                                 <Insets left="7.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Home">
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="45.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Home">
                             <VBox.margin>
                                 <Insets bottom="12.0" />
                             </VBox.margin>
@@ -90,7 +111,7 @@
                                 <Insets left="7.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Translate">
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToTranslate" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Translate">
                             <VBox.margin>
                                 <Insets bottom="12.0" />
                             </VBox.margin>
@@ -98,7 +119,7 @@
                                 <Insets left="25.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="54.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Pratice">
+                        <Button layoutX="10.0" layoutY="54.0" mnemonicParsing="false" onAction="#switchToPractice" prefHeight="46.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Pratice">
                             <VBox.margin>
                                 <Insets bottom="10.0" />
                             </VBox.margin>
@@ -114,7 +135,7 @@
                                 <Insets left="7.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="360.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Favorite">
+                        <Button layoutX="10.0" layoutY="360.0" mnemonicParsing="false" onAction="#switchToFavorite" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Favorite">
                             <VBox.margin>
                                 <Insets />
                             </VBox.margin>

@@ -14,19 +14,19 @@ import javafx.stage.Stage;
 
 public class SignUpWindow {
     @FXML
-    private TextField studentIdField;
+    public TextField studentIdField;
     @FXML
-    private TextField phoneNumberField;
+    public TextField phoneNumberField;
     @FXML
-    private TextField addressField;
+    public TextField addressField;
     @FXML
-    private TextField nameField;
+    public TextField nameField;
     @FXML
-    private DatePicker dobPicker;
+    public DatePicker dobPicker;
     @FXML
-    private PasswordField passwordField;
+    public PasswordField passwordField;
     @FXML
-    private PasswordField confirmPasswordField;
+    public PasswordField confirmPasswordField;
 
     private JDBCConnection jdbcConnection = new JDBCConnection();
 
@@ -43,6 +43,7 @@ public class SignUpWindow {
 
         Student student = new Student(studentId, name, password, phoneNumber, address, "", dob);
         jdbcConnection.insertUser(student);
+
 
         // Lưu thông tin vào cơ sở dữ liệu ở đây
         // ...

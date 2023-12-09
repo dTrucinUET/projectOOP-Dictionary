@@ -9,37 +9,92 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="backgroundImage" prefHeight="523.0" prefWidth="1000.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.controller.PracticeController">
     <children>
-        <AnchorPane layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: #ffeee3;">
+      <AnchorPane prefHeight="422.0" prefWidth="940.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="72.0">
          <children>
-            <VBox layoutX="181.0" layoutY="58.0" prefHeight="389.0" prefWidth="736.0" spacing="20.0">
+            <Label fx:id="lNumberQuestion" layoutX="183.0" layoutY="94.0" text="Question 1:" />
+            <Text fx:id="tQuestion" layoutX="274.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="582.9367370605469" />
+            <Label layoutX="237.0" layoutY="240.0" text="Answer" />
+            <TextField fx:id="tfAnswer" layoutX="332.0" layoutY="238.0" onAction="#getTextInput" prefHeight="26.0" prefWidth="380.0" />
+            <VBox layoutX="214.0" layoutY="290.0" prefHeight="100.0" prefWidth="511.0" spacing="5.0" stylesheets="@../css/pratice.css">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="477.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="b1" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="1" />
+                        <Button fx:id="b2" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="2" />
+                        <Button fx:id="b3" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="3" />
+                        <Button fx:id="b4" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="4" />
+                        <Button fx:id="b5" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="5" />
+                        <Button fx:id="b6" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="6" />
+                        <Button fx:id="b7" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="7" />
+                        <Button fx:id="b8" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="8" />
+                        <Button fx:id="b9" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="9" />
+                        <Button fx:id="b10" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="10" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="46.0" prefWidth="477.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="b11" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="11" />
+                        <Button fx:id="b12" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="12" />
+                        <Button fx:id="b13" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="13" />
+                        <Button fx:id="b14" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="14" />
+                        <Button fx:id="b15" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="15" />
+                        <Button fx:id="b16" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="16" />
+                        <Button fx:id="b17" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="17" />
+                        <Button fx:id="b18" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="18" />
+                        <Button fx:id="b19" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="19" />
+                        <Button fx:id="b20" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="20" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="lTime" layoutX="782.0" layoutY="30.0" text="Time:" />
+            <Label fx:id="lScore" layoutX="782.0" layoutY="60.0" text="Score:" />
+            <Text layoutX="444.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEST 1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="106.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="bSubmit" layoutX="789.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleButtonSubmit" text="Submit" />
+            <Text fx:id="hint" layoutX="396.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children>
+      </AnchorPane>
+        <AnchorPane fx:id="paneB" layoutX="29.0" layoutY="31.0" prefHeight="465.0" prefWidth="942.0" style="-fx-background-color: #ffeee3;">
+         <children>
+            <VBox layoutX="181.0" layoutY="58.0" prefHeight="389.0" prefWidth="736.0" spacing="20.0" stylesheets="@../css/exam.css">
                <children>
                   <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                              <Button fx:id="t1" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleButtonTest" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" stylesheets="@../css/exam.css" />
                               <Label layoutX="26.0" layoutY="14.0" prefHeight="30.0" prefWidth="54.0" text="Test 1" />
-                              <Text layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
-                              <Text layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
+                              <Text fx:id="time1" layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
+                              <Text fx:id="core1" layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
                               <Label layoutX="61.0" layoutY="39.0" text="20 Quesion" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                              <Button fx:id="t2" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleButtonTest" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" stylesheets="@../css/exam.css" />
                               <Label layoutX="26.0" layoutY="14.0" prefHeight="30.0" prefWidth="54.0" text="Test 2" />
-                              <Text layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
-                              <Text layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
+                              <Text fx:id="time2" layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
+                              <Text fx:id="core2" layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
                               <Label layoutX="61.0" layoutY="39.0" text="20 Quesion" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                              <Button fx:id="t3" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
                               <Label layoutX="26.0" layoutY="14.0" prefHeight="30.0" prefWidth="54.0" text="Test 3" />
                               <Text layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
                               <Text layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
@@ -52,7 +107,7 @@
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                              <Button fx:id="test4" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
                               <Label layoutX="26.0" layoutY="14.0" prefHeight="30.0" prefWidth="54.0" text="Test 4" />
                               <Text layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
                               <Text layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
@@ -61,7 +116,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                              <Button fx:id="test5" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
                               <Label layoutX="26.0" layoutY="14.0" prefHeight="30.0" prefWidth="54.0" text="Test 5" />
                               <Text layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
                               <Text layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
@@ -70,7 +125,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                              <Button fx:id="test6" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
                               <Label layoutX="26.0" layoutY="14.0" prefHeight="30.0" prefWidth="54.0" text="Test 6" />
                               <Text layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time: 00:00" />
                               <Text layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Core: 0" />
@@ -175,7 +230,7 @@
             <children>
                 <VBox alignment="BOTTOM_CENTER" layoutX="-51.2" layoutY="6.0" prefHeight="422.0" prefWidth="174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
+                        <Button mnemonicParsing="false" onAction="#switchToProfile" prefHeight="50.0" prefWidth="171.0" stylesheets="@../css/main.css" text=" Profile">
                             <VBox.margin>
                                 <Insets bottom="8.0" />
                             </VBox.margin>
@@ -183,7 +238,7 @@
                                 <Insets left="7.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Home">
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="45.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Home">
                             <VBox.margin>
                                 <Insets bottom="12.0" />
                             </VBox.margin>
@@ -191,7 +246,7 @@
                                 <Insets left="7.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Translate">
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToTranslate" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Translate">
                             <VBox.margin>
                                 <Insets bottom="12.0" />
                             </VBox.margin>
@@ -215,7 +270,7 @@
                                 <Insets left="7.0" />
                             </padding>
                         </Button>
-                        <Button layoutX="10.0" layoutY="360.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Favorite">
+                        <Button layoutX="10.0" layoutY="360.0" mnemonicParsing="false" onAction="#switchToFavorite" prefHeight="43.0" prefWidth="171.0" stylesheets="@../css/main.css" text="Favorite">
                             <VBox.margin>
                                 <Insets />
                             </VBox.margin>
@@ -286,47 +341,5 @@
                 </VBox>
             </children>
         </AnchorPane>
-      <AnchorPane prefHeight="422.0" prefWidth="940.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="72.0">
-         <children>
-            <Label fx:id="lNumberQuestion" layoutX="168.0" layoutY="28.0" text="Question 1:" />
-            <Text fx:id="tQuestion" layoutX="281.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="582.9367370605469" />
-            <Label layoutX="264.0" layoutY="240.0" text="Answer" />
-            <TextField fx:id="tfAnswer" layoutX="332.0" layoutY="238.0" onAction="#getTextInput" prefHeight="26.0" prefWidth="422.0" />
-            <VBox layoutX="317.0" layoutY="292.0" prefHeight="100.0" prefWidth="511.0" spacing="5.0" stylesheets="@../css/pratice.css">
-               <children>
-                  <HBox prefHeight="46.0" prefWidth="477.0" spacing="5.0">
-                     <children>
-                        <Button fx:id="b1" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="1" />
-                        <Button fx:id="b2" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="2" />
-                        <Button fx:id="b3" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="3" />
-                        <Button fx:id="b4" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="4" />
-                        <Button fx:id="b5" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="5" />
-                        <Button fx:id="b6" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100; -fx-background-radius: 100;" text="6" />
-                        <Button fx:id="b7" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="7" />
-                        <Button fx:id="b8" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="8" />
-                        <Button fx:id="b9" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="9" />
-                        <Button fx:id="b10" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="10" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="46.0" prefWidth="477.0" spacing="5.0">
-                     <children>
-                        <Button fx:id="b11" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="11" />
-                        <Button fx:id="b12" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="12" />
-                        <Button fx:id="b13" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="13" />
-                        <Button fx:id="b14" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="14" />
-                        <Button fx:id="b15" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="15" />
-                        <Button fx:id="b16" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="16" />
-                        <Button fx:id="b17" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="17" />
-                        <Button fx:id="b18" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="18" />
-                        <Button fx:id="b19" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="19" />
-                        <Button fx:id="b20" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="46.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 100;" text="20" />
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <Label layoutX="782.0" layoutY="30.0" text="Time:" />
-            <Label layoutX="782.0" layoutY="60.0" text="Score:" />
-         </children>
-      </AnchorPane>
     </children>
 </AnchorPane>

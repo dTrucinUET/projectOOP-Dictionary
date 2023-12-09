@@ -91,3 +91,12 @@
     -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
 
 }
+
+#end, #res {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+#end:hover, #res:hover {
+    -fx-background-color: #d6daf3;
+    -fx-background-radius: 10;
+}
